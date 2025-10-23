@@ -3,3 +3,4 @@ processed/*
 errors/*
 logs/*
 .env
+.venv/
