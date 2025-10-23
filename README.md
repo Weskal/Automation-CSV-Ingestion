@@ -1,0 +1,2 @@
+## Descritpion
+**This project automates the process of capturing CSV files sent via email and storing them centrally in an S3 bucket. The pipeline connects to an email server using IMAP, extracts and validates CSV attachments with imaplib and email, and automatically uploads them to Amazon S3 using boto3. The entire workflow runs locally or inside a Docker container and can be easily integrated into a complete data stack (e.g., Spark → MongoDB → Metabase).**
