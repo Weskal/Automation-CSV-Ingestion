@@ -6,6 +6,9 @@ from s3_uploader import upload_demand_to_s3
 from email_downloader import fetch_csv_attachments
 import logging
 
+os.makedirs('../data/incoming', exist_ok=True)
+os.makedirs('../data/processed', exist_ok=True)
+
 aws_creds_path = Path(__file__).parent.parent / "config" / "s3_config.json"
 incoming_data_input = Path(__file__).parent.parent / "data" / "incoming"
 processed_data_outuput = Path(__file__).parent.parent / "data" / "processed"
