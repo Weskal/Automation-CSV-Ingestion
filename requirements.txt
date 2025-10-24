@@ -1,0 +1,4 @@
+dotenv
+logging
+boto3
+imaplib2

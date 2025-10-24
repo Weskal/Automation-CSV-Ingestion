@@ -1,6 +1,7 @@
 incoming/*
-processed/*
+data/*
 errors/*
 logs/*
 .env
 .venv/
+config/*.json
