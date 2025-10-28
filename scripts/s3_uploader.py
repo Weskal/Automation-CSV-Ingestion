@@ -3,7 +3,7 @@ import os
 import shutil
 from pathlib import Path
 
-def upload_demand_to_s3(aws_config, incoming_data_input, processed_data_outuput):
+def upload_to_s3(aws_config, incoming_data_input, processed_data_outuput):
 
     s3 = boto3.client(
         "s3",
@@ -12,7 +12,7 @@ def upload_demand_to_s3(aws_config, incoming_data_input, processed_data_outuput)
         region_name=aws_config["region_name"]
     )
 
-    key = aws_config["bucket_key_demanda"]
+    key = aws_config["bucket_key"]
     bucket = aws_config["bucket"]
 
     files = sorted(os.listdir(incoming_data_input))

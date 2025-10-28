@@ -2,9 +2,8 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import json
-from s3_uploader import upload_demand_to_s3
+from s3_uploader import upload_to_s3
 from email_downloader import fetch_csv_attachments
-import logging
 
 os.makedirs('../data/incoming', exist_ok=True)
 os.makedirs('../data/processed', exist_ok=True)
@@ -28,6 +27,6 @@ with open(aws_creds_path) as f:
 
 fetch_csv_attachments(email_config)
 print("=="*30)
-upload_results = upload_demand_to_s3(aws_config, incoming_data_input, processed_data_outuput)
+upload_results = upload_to_s3(aws_config, incoming_data_input, processed_data_outuput)
 print(upload_results)
 
